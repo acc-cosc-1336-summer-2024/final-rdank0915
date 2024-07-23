@@ -1,7 +1,7 @@
 import question_a
 
 def display_menu():
-    print("Final Menu")
+    print("Question A Menu")
     print("1-Stock Purchase History")
     print("2-Exit")
 
