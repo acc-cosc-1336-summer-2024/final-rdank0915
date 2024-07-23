@@ -18,21 +18,26 @@ def run_menu():
 def handle_menu_option(option):
     if(option == '1'):
         option_1()
+    elif(option == '2'):
+        option_2()
     else:
         print("Invalid Option")
 
 def option_1():
     
-    stock_list = question_a.Stock()
-
-    stock_list.stock_purchase_history()
-    list = (stock_list)
+    list = question_a.stock_purchase_history()
+    
     print(list)
 
     choice = "Y"
-    while(choice == "Y" or choice == "N"):
-        choice = input("Would you like to exit Y or N: ")
+    while(choice == "Y"):
+        choice = input("Enter Y to exit: ")
         if choice == "Y":
-            print(option_1())
-        elif choice == "N":
             print(run_menu())
+            break
+        else:
+            print("Invalid Option")
+    
+def option_2():
+    print("Exiting the program...")
+    

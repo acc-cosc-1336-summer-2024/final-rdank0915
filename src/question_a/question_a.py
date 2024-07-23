@@ -21,22 +21,16 @@ class Stock:
 #Create a function stock_purchase_history with 5 variables/instances of Stock
 #with the values from the Stock List
 def stock_purchase_history():
-    stock_list = [
-        ("AAPL", "Apple Inc"),
-        ("CAT", "Caterpillar"),
-        ("EK", "Eastman Kodak"),
-        ("GOOG", "Google"),
-        ("MSFT", "Microsoft")
-    ]
+
+    symbol = ["AAPL", "CAT", "EK", "GOOG", "MSFT"]
+    company_name = ["Apple Inc", "Caterpillar", "Eastman Kodak", "Google", "Microsoft"]
 
     #Create a dictionary to hold the stocks
     stock_dict = {}
 
     #Add the 5 stock variables to a dictionary
-    for entry in stock_list:
-        symbol = entry[0]
-        company_name = entry[1]
-        stock_dict[stock_list.index(entry)] = {symbol, company_name}
+    for i in range (len(symbol)):
+        stock_dict.update({symbol[i]: company_name[i]})
 
     print(stock_dict)
     
