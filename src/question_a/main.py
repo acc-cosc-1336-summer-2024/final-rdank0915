@@ -1,5 +1,5 @@
 #add import
 
-import menu
+import question_a
 
-menu.run_menu()
+question_a.stock_purchase_history()

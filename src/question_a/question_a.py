@@ -28,14 +28,16 @@ def stock_purchase_history():
         ("GOOG", "Google"),
         ("MSFT", "Microsoft")
     ]
-    
+
     #Create a dictionary to hold the stocks
     stock_dict = {}
 
     #Add the 5 stock variables to a dictionary
-    for symbol, company_name in stock_list.items():
-        stock_dict[symbol] = Stock(symbol, company_name)
+    for entry in stock_list:
+        symbol = entry[0]
+        company_name = entry[1]
+        stock_dict[stock_list.index(entry)] = {symbol, company_name}
 
-    print(stock_dict.keys())
-    print(stock_dict.values())
+    print(stock_dict)
+    
     
