@@ -15,14 +15,27 @@ class Stock:
     def get_company_name(self):
         return self.__company_name
         
-#Create a function stock_list with 5 variables/instances of Stock
-#with the values from the Stock List
-def stock_list():
 
-    stock1 = Stock("AAPL", "Apple Inc")
-    stock2 = Stock("CAT", "Caterpillar")
-    stock3 = Stock("EK", "Eastman Kodak")
-    stock4 = Stock("GOOG", "Google")
-    stock5 = Stock("MSFT", "Microsoft")
+class StockList:
 
-   
+    def __init__(self):
+        self.stocks = []
+        self.add_stocks()
+    
+    def add_stocks(self):
+        symbols = ["AAPL", "CAT", "EK", "GOOG", "MSFT"]
+        company_names = ["Apple Inc", "Caterpillar", "Eastman Kodak", "Google", "Microsoft"]
+        
+        for i in range(len(symbols)):
+            stock = Stock(symbols[i], company_names[i])
+            self.stocks.append(stock)
+    
+    def display_stock_report(self):
+        
+        print("Company Stock Report")
+        print()
+        
+        for stock in self.stocks:
+            print(f"Company: {stock.get_company_name()}")
+            print(f"Symbol: {stock.get_symbol()}")
+            print()
