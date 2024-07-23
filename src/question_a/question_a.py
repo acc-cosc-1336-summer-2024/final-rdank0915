@@ -22,20 +22,20 @@ class Stock:
 #with the values from the Stock List
 def stock_purchase_history():
     stock_list = [
-        Stock("AAPL", "Apple Inc."),
-        Stock("CAT", "Caterpillar"),
-        Stock("EK", "Eastman Kodak"),
-        Stock("GOOG", "Google"),
-        Stock("MSFT", "Microsoft")
-        ]
+        ("AAPL", "Apple Inc"),
+        ("CAT", "Caterpillar"),
+        ("EK", "Eastman Kodak"),
+        ("GOOG", "Google"),
+        ("MSFT", "Microsoft")
+    ]
     
-    # Create a dictionary to hold the stocks
+    #Create a dictionary to hold the stocks
     stock_dict = {}
-    
-    #Add the 5 stock variables to a dictionary
-    for stock in stock_list:
-        stock_dict[Stock.get_symbol()] = Stock.get_company_name()
 
-    print("Symbol:\n" + "\n".join(f"{symbol}" for symbol in stock_dict.keys()))
-    print("\nCompany Name:\n" + "\n".join(f"{company_name}" for company_name in stock_dict.values()))
+    #Add the 5 stock variables to a dictionary
+    for symbol, company_name in stock_list.items():
+        stock_dict[symbol] = Stock(symbol, company_name)
+
+    print(stock_dict.keys())
+    print(stock_dict.values())
     
