@@ -7,13 +7,9 @@ def display_menu():
 
 def run_menu():
     option = "1"
-    while(option != "2"):
-        display_menu()
-        option = input("Enter your menu option: ")
-        if option == '2':
-            print("Exiting the program...")
-            break
-        handle_menu_option(option)
+    display_menu()
+    option = input("Enter your menu option: ")
+    handle_menu_option(option)
 
 def handle_menu_option(option):
     if(option == '1'):
@@ -37,7 +33,7 @@ def option_1():
             break
         else:
             print("Invalid Option")
-    
+
 def option_2():
     print("Exiting the program...")
     
