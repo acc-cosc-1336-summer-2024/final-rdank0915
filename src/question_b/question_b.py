@@ -25,10 +25,9 @@ def display_menu():
 
 def run_menu():
     option = "1"
-    while(option != "2"):
-        display_menu()
-        option = input("Enter your menu option: ")
-        handle_menu_option(option)
+    display_menu()
+    option = input("Enter your menu option: ")
+    handle_menu_option(option)
 
 def handle_menu_option(option):
     if(option == '1'):
@@ -48,12 +47,11 @@ def option_1():
     
 
     choice = "Y"
-    while(choice == "Y" or choice == "N"):
-        choice = input("Would you like to exit Y or N: ")
-        if choice == "Y":
-            print(run_menu())
-        elif choice == "N":
-            print(option_1())
+    choice = input("Would you like to exit Y or N: ")
+    if choice == "Y":
+        print(option_2())
+    elif choice == "N":
+        print(run_menu())
 
 def option_2():
     print("Exiting the program...")
