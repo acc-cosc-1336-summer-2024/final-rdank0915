@@ -36,6 +36,6 @@ class StockList:
         print()
         
         for stock in self.stocks:
-            print(f"Company: {stock.get_company_name()}")
             print(f"Symbol: {stock.get_symbol()}")
+            print(f"Company: {stock.get_company_name()}")
             print()
