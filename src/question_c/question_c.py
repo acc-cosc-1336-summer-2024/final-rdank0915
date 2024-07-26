@@ -16,18 +16,18 @@ class Stock:
         return self.__company_name
         
 
-class StockList:
+class Portfolio:
 
     def __init__(self):
         self.stocks = []
-        self.add_stocks()
+        self.stock_list()
     
-    def add_stocks(self):
-        symbols = ["AAPL", "CAT", "EK", "GOOG", "MSFT"]
-        company_names = ["Apple Inc", "Caterpillar", "Eastman Kodak", "Google", "Microsoft"]
+    def stock_list(self):
+        symbol = ["AAPL", "CAT", "EK", "GOOG", "MSFT"]
+        company_name = ["Apple Inc", "Caterpillar", "Eastman Kodak", "Google", "Microsoft"]
         
-        for i in range(len(symbols)):
-            stock = Stock(symbols[i], company_names[i])
+        for i in range(len(symbol)):
+            stock = Stock(symbol[i], company_name[i])
             self.stocks.append(stock)
     
     def display_stock_report(self):
